@@ -14,4 +14,14 @@ class Book
     new_rental = Rental.new(person, self, date)
     @rentals << new_rental unless @rentals.include?(new_rental)
   end
+
+  def to_hash
+    {
+      class: 'Book',
+      id: @id,
+      title: @title,
+      author: @author
+    }
+  end
+  
 end
