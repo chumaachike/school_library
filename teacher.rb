@@ -10,15 +10,15 @@ class Teacher < Person
     true
   end
 
-  def to_hash
+  def to_json(*args)
     {
-      class: 'Teacher',
-      id: @id,
-      name: @name,
-      age: @age,
-      parent_permission: @parent_permission,
-      specialization: @specialization
-    }
+      JSON.create_id => self.class.name,
+      'a' => [@specialization, age, name, @parent_permission]
+    }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
   
 end
