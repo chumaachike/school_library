@@ -36,7 +36,7 @@ class Person < Nameable
       parent_permission: @parent_permission
     }
   end
-  
+
   private
 
   def of_age?

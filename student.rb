@@ -23,9 +23,8 @@ class Student < Person
       'a' => [@classroom, age, name, @parent_permission]
     }.to_json(*args)
   end
-  
+
   def self.json_create(object)
     new(*object['a'])
   end
-
 end
