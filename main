@@ -3,9 +3,11 @@ require './utils'
 require './app'
 require './all_books'
 require './all_peoples'
+require './storage'
 
 class Main
   include Utils
+  include StorageIO
 
   def initialize
     @app = App.new
@@ -13,6 +15,9 @@ class Main
     @allbooks = AllBooks.new(@app)
     @allpeople = AllPeoples.new(@app)
     @option = ''
+    @app.list_of_books = reader_books
+    @app.list_of_people = reader_peoples
+    reader_rental
   end
 
   def menu_content

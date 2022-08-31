@@ -15,13 +15,15 @@ class Book
     @rentals << new_rental unless @rentals.include?(new_rental)
   end
 
-  def to_hash
+  def to_json(*args)
     {
-      class: 'Book',
-      id: @id,
-      title: @title,
-      author: @author
-    }
+      JSON.create_id => self.class.name,
+      'a' => [title, author]
+    }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
   
 end
