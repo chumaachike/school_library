@@ -52,6 +52,7 @@ class Main
       when '6'
         @allrentals.list_all_rentals
       else
+        writer
         puts "Thank you for using this app!\n"
         break
       end

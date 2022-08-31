@@ -15,14 +15,16 @@ class Book
     @rentals << new_rental unless @rentals.include?(new_rental)
   end
 
+  # Serialize Foo object with its class name and arguments
   def to_json(*args)
     {
-      JSON.create_id => self.class.name,
-      'a' => [title, author]
+      JSON.create_id  => self.class.name,
+      'a'             => [ title, author ]
     }.to_json(*args)
   end
-
+  # Deserialize JSON string by constructing new Foo object with arguments.
   def self.json_create(object)
     new(*object['a'])
-  end
+  end  
+
 end
