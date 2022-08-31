@@ -27,6 +27,16 @@ class Person < Nameable
     @rentals << new_rental unless @rentals.include?(new_rental)
   end
 
+  def to_hash
+    {
+      class: 'Person',
+      id: @id,
+      name: @name,
+      age: @age,
+      parent_permission: @parent_permission
+    }
+  end
+
   private
 
   def of_age?

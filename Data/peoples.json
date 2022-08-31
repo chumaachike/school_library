@@ -1,0 +1,4 @@
+{"json_class":"Student","a":["#<Classroom:2549999>","28","James","y"]}
+{"json_class":"Teacher","a":["Mathematics","47","Jane","true"]}
+{"json_class":"Student","a":["#<Classroom:0x000055590cf49088>","14","testing","y"]}
+{"json_class":"Student","a":["#<Classroom:0x000055590cf49088>","14","Benard","y"]}
