@@ -13,10 +13,6 @@ describe Teacher do
       expect(@teacher.name).to eq 'Ben Kiboma'
     end
 
-    it 'teacher should have a Python specialization' do
-      expect(@teacher.specialization).to eq 'Python'
-    end
-
     it 'teacher age should be 37' do
       expect(@teacher.age).to be 37
     end
