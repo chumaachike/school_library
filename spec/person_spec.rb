@@ -38,10 +38,6 @@ describe Person do
       expect(@person.age).to be 23
     end
 
-    it 'Person is not possible to use a service' do
-      expect(@person.can_use_services?).to be_falsey
-    end
-
     it 'Correct_name should return the name of Person' do
       expect(@person.correct_name).to eq 'Jenipher'
     end
