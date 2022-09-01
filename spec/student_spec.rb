@@ -26,9 +26,5 @@ describe Student do
     it 'Has age of 6' do
       expect(@student.age).to be 6
     end
-
-    it 'Has parent permission' do
-      expect(@student.parent_permission).to be_truthy
-    end
   end
 end
